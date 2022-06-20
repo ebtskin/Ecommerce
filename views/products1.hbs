@@ -1,0 +1,71 @@
+<div class="row">
+	<form class="col s12 action="/admin/upload" method="POST">
+		<h3>Add Product</h3>
+		<div class="row">
+			<div class="input-field col s4">
+				<input
+					id="productName"
+					type="text"
+					name="productName"
+					class="validate"
+				/>
+				<label for="productName">Product Name 111</label>
+			</div>
+			<div class="input-field col s4">
+				<input id="price" type="text" name="price" class="validate" />
+				<label for="price">Price</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s4">
+				<textarea
+					id="textarea1"
+					class="materialize-textarea"
+				></textarea>
+				<label for="textarea1">Desciption</label>
+			</div>
+			<div class="file-field input-field col s4">
+				<div class="btn">
+					<span>Upload Image</span>
+					<input type="file" name="testImage"/>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<h4>Select Category</h4>
+			<p>
+				<label>
+					<input name="viet" type="radio" checked />
+					<span>Vietnamese</span>
+				</label>
+			</p>
+			<p>
+				<label>
+					<input name="chinese" type="radio" />
+					<span>Chinese</span>
+				</label>
+			</p>
+			<p>
+				<label>
+					<input name="thai" type="radio" />
+					<span>Thai</span>
+				</label>
+			</p>
+			<p>
+				<label>
+					<input name="other" type="radio" />
+					<span>Other</span>
+				</label>
+			</p>
+		</div>
+		<div class="row">
+			<button
+				class="btn waves-effect waves-light"
+				type="submit"
+				name="action"
+			>Submit
+				<i class="material-icons right">send</i>
+			</button>
+		</div>
+	</form>
+</div>

@@ -1,0 +1,47 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+			integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link rel="stylesheet" href="/css/style.css" />
+		<title>Asian Sauces:User Page</title>
+	</head>
+	<body>
+		<header>
+		{{> _header}}
+		</header>
+		<main>
+		<div class="row col12">
+            <div class="col s6">
+                <h3>Welcome {{name}}</h3>
+				<h5>Category -> Fish Sauces</h5>
+            </div>
+            <div class="col s12">
+                {{{body}}}
+            </div>
+		</div>
+		</main>
+		{{> _footer}}
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"
+		></script>
+
+		<script>
+			M.Sidenav.init(document.querySelector('.sidenav'));
+			M.Dropdown.init(document.querySelector('.dropdown-trigger'));
+		</script>
+	</body>
+</html>

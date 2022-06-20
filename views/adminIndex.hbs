@@ -1,0 +1,49 @@
+<h5>Admin Dashboard</h5>
+<h3>Welcome {{name}}</h3>
+<p>These are your saved items</p>
+
+<h4>Total Users#: {{count}}</h4>
+<div class="dashboard1">
+	{{#each user}}
+		{{#each this}}
+			{{#if _id}}
+				<div class="row">
+					<div class="col s4">
+						<h5><b>ID:</b> {{_id}}</h5>
+					</div>
+					<div class="col s4">
+						<h5><b>Username:</b> {{username}}</h5>
+					</div>
+					<div class="col s2">
+						<form action="/admin/delete" method="post">
+							<button
+								class="btn red darken-4"
+								name="user"
+								value="{{_id}}"
+							>Delete</button>
+						</form>
+					</div>
+
+					<form action="/admin/userCart" method="post">
+						<button
+							class="btn green darken-2"
+							name="user"
+							value="{{_id}}"
+						>View Cart</button>
+					</form>
+
+				</div>
+				<div class="row">
+					<div class="col s4">
+						<h5><b>Type</b> {{userType}}</h5>
+					</div>
+					<div class="col s4">
+						<h5><b>First Name: </b> {{firstName}}</h5>
+					</div>
+				</div>
+				<hr />
+
+			{{/if}}
+		{{/each}}
+	{{/each}}
+</div>

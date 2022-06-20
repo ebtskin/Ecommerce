@@ -1,0 +1,41 @@
+<h5>Vietnamese Fish Sauces</h5>
+
+<div class="dashboard col12">
+	{{#each product}}
+	{{#each this}}
+	{{#if name}}
+			<div class="column">
+				<div class="card col s3">
+					<div
+						class="card-image waves-effect waves-block waves-light"
+					>
+						<img class="activator" src="images/{{this.image}}" />
+					</div>
+					<div class="card-content">
+						<span
+							class="card-title activator grey-text text-darken-4"
+						>{{name}}<i
+								class="material-icons right"
+							>more_vert</i></span>
+						<p><a href="#">Buy Me</a>&nbsp;&nbsp;&nbsp;<span>
+								<form action="/user/cart" method="post">
+									<button name="cart" value="{{_id}}">Save Me</button>
+								</form></span></p>
+
+					</div>
+					<div class="card-reveal">
+						<span
+							class="card-title grey-text text-darken-4"
+						>Category:
+							{{category}}<i
+								class="material-icons right"
+							>close</i></span>
+						<p>Price $: {{price}}</p>
+						<p>Description: {{description}}</p>
+					</div>
+				</div>
+			</div>
+			{{/if}}
+	{{/each}}
+	{{/each}}
+</div>
